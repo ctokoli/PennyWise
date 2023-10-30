@@ -1,0 +1,37 @@
+.splash {
+    background-color: #f0f0f0;
+    height: 100vh;
+    place-items: center;
+    display: grid;
+}
+
+.splash-logo img {
+    width: 248px;
+}
+
+.auth {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth button {
+    width: 350px;
+    margin-bottom: 10px;
+    padding: 18px 0px;
+    font-size: 1.2em;
+    border: none;
+}
+
+button.login-btn {
+    background: #3777C2;
+    color: white;
+}
+
+button.signup-btn:hover {
+    background: #3777C2;
+    color: #fff;
+}
+
+button.signup-btn {
+    color: #5f5f5f;
+}
