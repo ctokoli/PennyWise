@@ -78,3 +78,5 @@ gem 'devise', '~> 4.9'
 gem 'bullet', '~> 7.1'
 
 gem 'cancancan'
+
+gem 'erb_lint'
