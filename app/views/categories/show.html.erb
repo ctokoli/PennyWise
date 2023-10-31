@@ -1,0 +1,41 @@
+<div class="heading">
+    <a href="/categories">
+        <img src="/assets/arrow-white.png" alt="arrow">
+    </a>
+    <h3><%= @category.name %></h3>
+    <h3 class="btn-show">
+        <% if user_signed_in? %>
+            <li><%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+            <li><%= link_to "Sign up now!",  new_user_registration_path %></li>
+        <% end %>
+    </h3>
+</div>
+
+<%if  @expenses.empty? %>
+    <h3> No Expenses </h3>
+    <div class="link-btn">
+        <%= link_to "Add Expenses", new_category_expense_path(@category.id), class: "add-link" %>
+    </div>
+    <% else %><>
+    <div class="expenses">
+        <div></div>
+        <div>
+            <ul class="expense-card">
+                <% @expenses.each do |expense| %>
+                    <li class="card-pad">
+                        <a href="/categories/<%= @category.id %>/expenses/<%= expense.id %>">
+                            <div class="expense">
+                                <div class="expense-image">
+                                    <img src="<%= expense.image %>" alt="expense image">
+                                </div>
+                                <div class="expense-name">
+                                    <h3><%= expense.name %></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
