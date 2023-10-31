@@ -1,7 +1,47 @@
-<% if user_signed_in? %>
-<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-<% else %>
-<li><%= link_to "Sign up now!",  new_user_registration_path %></li>
-<% end %>
+<div class="heading">
+    <a href="/">
+        <img src="/assets/arrow-white.png" alt="arrow">
+    </a>
+    <h3>CATEGORIES</h3>
+    <h3 class="btn-show">
+        <% if user_signed_in? %>
+            <li><%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+            <li><%= link_to "Sign up now!",  new_user_registration_path %></li>
+        <% end %>
+    </h3>
+</div>
 
-<h1>Index Page</h1> 
+
+<div class="categories">
+    <div></div>
+    <div>
+        <%if @categories.empty? %>
+            <h3> No categories </h3>
+            <div class="link-btn">
+                <%= link_to "Add Category", new_category_path, class: "add-link" %>
+            </div>
+        <% else %>
+            <ul class="category-card">
+                <% @categories.each do |category| %>
+                    <li class="card-pad">
+                        <a href="/categories/<%= category.id %>">
+                            <div class="category">
+                                <div class="category-image">
+                                    <img src="<%= category.image %>" alt="category image">
+                                </div>
+                                <div class="category-name">
+                                    <h3><%= category.name %></h3>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                <% end %>
+            </ul>
+        <% end %>   
+        <div class="link-btn">
+            <%= link_to "Add Category", new_category_path, class: "add-link" %>
+        </div>
+    </div>
+</div>
+
