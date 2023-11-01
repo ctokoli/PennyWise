@@ -31,7 +31,12 @@
                                     <img src="<%= category.image %>" alt="category image">
                                 </div>
                                 <div class="category-name">
+                                    <% total_price = 0 %>
+                                        <% category.expenses.each do |expense| %>
+                                        <% total_price += expense.amount %>
+                                    <% end %>
                                     <h3><%= category.name %></h3>
+                                    <h3 class="amount"> $ <%=  total_price %></h3>
                                 </div>
                             </div>
                         </a>
