@@ -33,13 +33,13 @@ button.login-btn {
   color: white;
 }
 
+button.signup-btn {
+  color: #5f5f5f;
+}
+
 button.signup-btn:hover {
   background: #3777c2;
   color: #fff;
-}
-
-button.signup-btn {
-  color: #5f5f5f;
 }
 
 .heading {
@@ -52,6 +52,12 @@ button.signup-btn {
   margin-bottom: 10px;
 }
 
+.category-image img {
+  width: 85px;
+  height: 65px;
+}
+
+
 .heading a img {
   width: 30px;
 }
@@ -62,11 +68,6 @@ input {
   padding: 5px 10px;
   font-size: 18px;
   border: none;
-}
-
-.login-submit {
-  position: relative;
-  top: 0;
 }
 
 .login-submit {
@@ -156,6 +157,10 @@ h3.btn-show li a {
   color: #fff;
 }
 
+li {
+  list-style: none;
+}
+
 h3.btn-show li {
   list-style: none;
 }
@@ -170,11 +175,6 @@ ul.category-card li a {
   color: #8b8b8b;
 }
 
-.category-image img {
-  width: 85px;
-  height: 65px;
-}
-
 ul.category-card {
   background: #fff;
   margin: 5px 0;
@@ -184,10 +184,6 @@ ul.category-card {
 .category-name {
   padding-left: 10px;
   display: flex;
-}
-
-li {
-  list-style: none;
 }
 
 ul {
