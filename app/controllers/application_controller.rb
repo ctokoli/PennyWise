@@ -5,10 +5,9 @@ class ApplicationController < ActionController::Base
     categories_path
   end
 
+  protected
 
- protected
-
- def configure_permitted_parameters
-  devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation])
- end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation])
+  end
 end
