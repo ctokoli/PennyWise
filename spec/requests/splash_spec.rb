@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Splashes', type: :request do
-  
   describe 'GET /index' do
     it 'returns http success' do
       get '/'
@@ -13,6 +12,4 @@ RSpec.describe 'Splashes', type: :request do
       expect(response).to render_template('index')
     end
   end
-
-
 end
