@@ -13,7 +13,6 @@ RSpec.describe Category, type: :model do
     end
   end
 
-
   describe 'public instance methods' do
     context 'should return' do
       it 'all the categories' do
@@ -23,12 +22,12 @@ RSpec.describe Category, type: :model do
   end
 
   describe 'should return value of category' do
-      it 'the total amount of expenses' do
-        expect(@category.name).to eq('food')
-      end
+    it 'the total amount of expenses' do
+      expect(@category.name).to eq('food')
+    end
 
-      it 'should return name' do
-        expect(@category.image).to eq('https://image.flaticon.com/icons/png/512/1046/1046821.png')
-      end
+    it 'should return name' do
+      expect(@category.image).to eq('https://image.flaticon.com/icons/png/512/1046/1046821.png')
+    end
   end
 end
