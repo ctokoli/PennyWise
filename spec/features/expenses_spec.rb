@@ -5,7 +5,7 @@ RSpec.describe 'Expenses', type: :feature do
   let(:category) { FactoryBot.create(:category, user_id: user.id) }
 
   before(:each) do
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
   end
 
   describe 'GET /new' do
@@ -27,5 +27,4 @@ RSpec.describe 'Expenses', type: :feature do
       expect(page).to have_content('ADD TRANSACTION')
     end
   end
-
 end
