@@ -17,20 +17,23 @@
     <div class="link-btn">
         <%= link_to "Add Expenses", new_category_expense_path(@category.id), class: "add-link" %>
     </div>
-    <% else %><>
+    <% else %>
+    <div class="total-card">
+        <div class="total">
+            <h3>Total</h3>
+            <h3>$ <%= @total_price %></h3>
+        </div>
+    </div>
     <div class="expenses">
         <div></div>
         <div>
             <ul class="expense-card">
                 <% @expenses.each do |expense| %>
                     <li class="card-pad">
-                        <a href="/categories/<%= @category.id %>/expenses/<%= expense.id %>">
                             <div class="expense">
-                                <div class="expense-image">
-                                    <img src="<%= expense.image %>" alt="expense image">
-                                </div>
                                 <div class="expense-name">
                                     <h3><%= expense.name %></h3>
+                                    <h3 class="amount">$ <%= expense.amount %></h3>
                                 </div>
                             </div>
                         </a>
@@ -39,3 +42,7 @@
             </ul>
         </div>
     <% end %>
+
+    <div class="link-btn">
+        <%= link_to "Add Expenses", new_category_expense_path(@category.id), class: "add-link" %>
+    </div>
