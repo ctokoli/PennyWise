@@ -4,7 +4,7 @@ RSpec.describe 'Expenses', type: :request do
   let(:user) { FactoryBot.create(:user) }
 
   before(:each) do
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
   end
 
   describe 'GET /index' do
