@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
   def create
     @expense = current_user.expense.build(expense_params)
     if @expense.save
-      flash[:success] = 'Expense created!'
+      flash[:notice] = 'Expense was successfully created.'
       redirect_to categories_path
     else
       render 'new'
