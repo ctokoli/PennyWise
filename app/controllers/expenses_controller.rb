@@ -6,18 +6,19 @@ class ExpensesController < ApplicationController
   end
 
   def new
+    @categories = current_user.category
     @expense = current_user.expense.build
   end
 
   def show
     @expense = Expense.find_by(id: params[:id])
   end
-  
+
   def create
     @expense = current_user.expense.build(expense_params)
     if @expense.save
-      flash[:success] = "Expense created!"
-      redirect_to expenses_path
+      flash[:success] = 'Expense created!'
+      redirect_to categories_path
     else
       render 'new'
     end
