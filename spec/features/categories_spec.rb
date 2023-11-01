@@ -5,7 +5,7 @@ RSpec.describe 'Categories Page', type: :feature do
   let(:category) { FactoryBot.create(:category, user_id: user.id) }
 
   before(:each) do
-    login_as(user, :scope => :user)
+    login_as(user, scope: :user)
   end
 
   scenario 'create a new category' do
@@ -31,5 +31,4 @@ RSpec.describe 'Categories Page', type: :feature do
       expect(page).to have_content(category.name)
     end
   end
-
 end
