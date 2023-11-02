@@ -1,7 +1,12 @@
-<h1>PennyWise</h1>
+<h1></h1>
 
 <a name="readme-top"></a>
+<div align="center">
 
+  <img src="app\assets\images\pennywise-logo" alt="logo" width="160" height="auto" />
+  <br/>
+<h1>$ PennyWise $</h1>
+</div>
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -11,6 +16,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [Live Demo ](#live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
