@@ -3,7 +3,7 @@
 <a name="readme-top"></a>
 <div align="center">
 
-  <img src="app\assets\images\pennywise-logo" alt="logo" width="160" height="auto" />
+  <img src="app\assets\images\pennywise-logo.png" alt="logo" width="160" height="auto" />
   <br/>
 <h1>$ PennyWise $</h1>
 </div>
