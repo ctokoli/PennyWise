@@ -27,7 +27,7 @@
 
 # 📖 PennyWise <a name="about-project"></a>
 
-PennyWisePennyWise is a dynamic and user-friendly recipe application developed with Ruby on Rails, designed to allow users create, read, update and delete their recipes. It has features like Authentication, Authorization,  Rails dynamic Routing and testing.
+PennyWise is a dynamic mobile web application developed with Ruby on Rails, designed to allow users create and manage their budgets. It has features like Authentication, Rails dynamic Routing and testing.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -60,28 +60,43 @@ Key features of the application.
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+- ### Prerequisites
+  - `git` installed. Please got to [Getting Started - Installing Git guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and follow the steps described for your system to install `git`.
+  - `Ruby` installed, you can go to the [Installing Ruby](https://www.ruby-lang.org/en/documentation/installation/) documentation and follow the steps for your computer OS.
+  - `Rails` installed, you can follow the [GoRails Tutorial](https://gorails.com/setup/) and follow the steps for your computer OS.
+  - `PostgreSQL` installed, you can follow the [PostgreSQL Tutorial](https://www.postgresqltutorial.com/) and follow the steps for your computer OS.
 
-In order to run this project you need:
+- ### Setup
+  Clone this repository to your `local-folder`:
+  ```sh
+  cd local-folder
+  git clone https://github.com/ctokoli/PennyWise.git
+  ```
 
-- PostgreSQL.
-- Code Editor.
-- Ruby On Rails.
-- CSS
-
-### Setup
-
-Clone this repository to your desired folder:
-
-```sh
+- ### Usage
+  In the `local-folder` where you cloned the project, go into the project folder
+  ```sh
   cd PennyWise
-  gh repo clone https://github.com/ctokoli/RoR-Recipe-app.git
-```
+  ```
 
-### Install
+- ### Configure the database 
+  ``` Make sure to modify the username and password in the `config/database.yml` to your local machine postgres setup ```
+- ### Prepare
+  In the `PennyWise` folder, use the following code to install the app dependencies
+  ```rb
+  bundle install
+  ```
 
-- Install <a href="https://www.postgresql.org/">PostgreSQL</a>.
-- Install <a href="https://rubyonrails.org/">Ruby On Rails</a>.
+- ### Run
+  In the `PennyWise` folder, use the following code to run the app
+  ```rb
+  rails s
+  ```
+
+- ### Open
+  Open your favorite `browser` and type in the address bar
+  ```sh
+  http://localhost:3000.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,7 +154,9 @@ If you like this project, show your support by giving the project a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for including this in their curriculum.
+- Thanks to  [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for the origional design idea..
+- Micorverse team and its community for their support and this amazing learning opportunity.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
