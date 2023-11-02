@@ -1,0 +1,33 @@
+<div class="heading">
+  <a href="/">
+    <img src="/assets/left-arrow.png" alt="arrow">
+  </a>
+  <h3>REGISTER</h3>
+  
+  <h3 class="btn-hide">Login</h3>
+</div>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="field">
+    <%= f.text_field :name, autocomplete: "name", placeholder: "Full Name" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", password: "password", placeholder: "password" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "password confirmation" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "login-submit" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

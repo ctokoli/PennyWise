@@ -81,6 +81,10 @@ test:
 #
 production:
   <<: *default
-  database: ro_r_budget_app_pro
-  username: ro_r_budget_app
-  password: <%= ENV["RO_R_BUDGET_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+# production:
+#   <<: *default
+#   database: ro_r_budget_app_pro
+#   username: ro_r_budget_app
+#   password: <%= ENV["RO_R_BUDGET_APP_DATABASE_PASSWORD"] %>
