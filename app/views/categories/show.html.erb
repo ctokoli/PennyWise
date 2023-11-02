@@ -41,8 +41,9 @@
                 <% end %>
             </ul>
         </div>
+        <div class="link-btn">
+            <%= link_to "Add Expenses", new_category_expense_path(@category.id), class: "add-link" %>
+        </div>
     <% end %>
 
-    <div class="link-btn">
-        <%= link_to "Add Expenses", new_category_expense_path(@category.id), class: "add-link" %>
-    </div>
+    
