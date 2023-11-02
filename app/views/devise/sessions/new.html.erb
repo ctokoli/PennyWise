@@ -1,0 +1,25 @@
+<div class="heading">
+  <a href="/">
+    <%= image_tag 'arrow-white.png' %>
+  </a>
+  <h3>LOGIN</h3>
+  
+  <h3 class="btn-hide">Login</h3>
+</div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
+  </div>
+  
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Login", class: "login-submit"%>
+  </div>
+<% end %>
+<div class="links-hide">
+  <%= render "devise/shared/links" %>
+</div>
